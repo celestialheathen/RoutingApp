@@ -10,6 +10,10 @@ Rails.application.routes.draw do
   get 'contact', to: 'pages#contact', as: 'lead'
 
   resources :blogs
+  resources :posts
+  get 'posts/*missing', to: 'posts#missing'
+
+  get 'query/:else', to: 'posts#something'
 
   root to: 'pages#home'
 
